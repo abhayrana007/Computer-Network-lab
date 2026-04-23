@@ -1,0 +1,15 @@
+! --- Router Interface Setup ---
+enable
+configure terminal
+interface GigabitEthernet0/0
+ ip address 192.168.1.1 255.255.255.0
+ no shutdown
+exit
+
+! --- Example: Enabling services for testing ---
+! On Server0
+ip http server
+ip tftp server
+! Ensure SCTP is conceptually represented in host service settings.
+end
+write memory
