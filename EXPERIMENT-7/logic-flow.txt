@@ -1,0 +1,12 @@
+SENDER LOGIC:
+Next_Frame_To_Send = 0
+Window_Size = 4
+If (Next_Frame < Last_ACK + Window_Size) -> TRANSMIT
+
+RECEIVER LOGIC (Piggybacking):
+Receive(Frame_X)
+If (Outgoing_Data_Available)
+   Attach_ACK(X) to Data_Frame
+   SEND
+Else
+   SEND_STANDALONE_ACK(X)
