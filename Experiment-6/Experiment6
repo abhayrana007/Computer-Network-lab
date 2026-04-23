@@ -1,0 +1,34 @@
+📡 Multiple Access Protocols Simulation (ALOHA & CSMA)
+🎯 Objective
+To simulate and evaluate the performance of Pure ALOHA, Slotted ALOHA, CSMA/CD, and CSMA/CA using Cisco Packet Tracer, focusing on collision handling and efficiency.
+
+📘 Protocol Implementation Overview
+1. 📡 ALOHA Protocols (Implemented using Hubs)
+Pure ALOHA
+Nodes transmit whenever data is available. If a collision occurs, they wait a random time and retransmit.
+
+⏱️ Slotted ALOHA
+Time is divided into discrete slots. Nodes only transmit at the start of a slot, reducing the collision window by half.
+
+2. 📶 CSMA Protocols (Implemented using Switches/Wireless)
+CSMA/CD (Collision Detection)
+Nodes listen to the bus before sending. If a collision is detected during transmission, they stop and send a jam signal. (Simulated using Ethernet Half-Duplex)
+
+CSMA/CA (Collision Avoidance)
+Used in Wireless LANs. Nodes use a Request to Send / Clear to Send (RTS/CTS) mechanism to reserve the medium.
+
+🖧 Network Topology
+Wired Section: Multiple PCs connected to a Central Hub (for ALOHA / CSMA/CD)
+
+Wireless Section: Laptops connected to a Wireless Access Point (for CSMA/CA)
+
+Addressing: Subnet 192.168.1.0/24
+
+🔍 How to Analyze
+Open the specific .pkt file for the protocol you wish to test.
+
+Enter Simulation Mode.
+
+Create multiple PDUs (packets) starting at the same time to trigger collisions.
+
+Observe the "Fire" icon in Packet Tracer representing a collision and the subsequent Backoff timers.
