@@ -1,0 +1,30 @@
+📦 Sliding Window Protocol with Piggybacking
+🎯 Objective
+To implement a simulation demonstrating the Sliding Window mechanism for flow control and the Piggybacking technique to reduce protocol overhead.
+
+📘 Core Concepts
+📐 Sliding Window
+Allows the sender to have multiple "in-flight" packets (up to the window size 
+W
+W) before requiring an ACK. This fills the pipe (bandwidth-delay product) more effectively than Stop-and-Wait.
+
+🎒 Piggybacking
+Instead of sending a dedicated ACK packet, the receiver attaches the acknowledgment sequence number to its own outgoing data frame. This saves bandwidth and reduces the number of small packets in the network.
+
+🖧 Simulation Environment
+Topology: Point-to-point connection between:
+
+PC0 (192.168.1.2)
+
+PC1 (192.168.1.3)
+
+Tool: Cisco Packet Tracer — Simulation Mode
+
+🔍 Observation Instructions
+Open sliding_window.pkt.
+
+Observe the PDU Details.
+
+Look for the ACK field within a Data PDU coming back from the receiver.
+
+Note that the sender continues to transmit while the ACK is still in transit, provided the window limit isn't reached.
