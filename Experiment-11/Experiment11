@@ -1,0 +1,36 @@
+🌐 HTTP and WWW Simulation: Web Server Interaction
+🎯 Objective
+To implement and simulate the Hypertext Transfer Protocol (HTTP) within a Cisco Packet Tracer environment, demonstrating how web servers and clients interact to transfer content over the World Wide Web (WWW) .
+
+📘 Theory
+📨 HTTP (Hypertext Transfer Protocol)
+An application-layer protocol that follows a Request-Response model. It typically runs over TCP on Port 80.
+
+🖥️ Web Client
+A browser that initiates an HTTP GET request to a specific IP address or domain name.
+
+🗄️ Web Server
+A host that listens for requests and responds with resources such as HTML files, images, stylesheets, and scripts.
+
+🖧 Topology Setup
+Device	IP Address	Role
+Web Server	192.168.1.1	Configured with custom index.html
+Client PC0	192.168.1.2	Web browser client
+Client PC1	192.168.1.3	Web browser client
+Switch	—	Cisco 2960 Switch (Star Topology)
+Connecting Device: Cisco 2960 Switch connecting all devices in a Star Topology.
+
+🔍 Simulation Steps
+1. ✅ Connectivity Test
+Ensure all devices can ping the web server successfully.
+
+2. 🌍 Web Access
+Use the PC's Web Browser tool to request:
+➡️ http://192.168.1.1
+
+3. 📦 Packet Analysis
+Use Simulation Mode to capture and inspect:
+
+Direction	Message
+Client → Server	HTTP GET request
+Server → Client	HTTP 200 OK response
