@@ -1,0 +1,10 @@
+! --- SERVER DNS CONFIGURATION ---
+Service: DNS (ON)
+Domain Name: example.com | Type: A Record | IP: 192.168.1.2
+Domain Name: test.com    | Type: A Record | IP: 192.168.1.3
+Domain Name: newsite.com | Type: A Record | IP: 192.168.1.4
+
+! --- DDNS SETTINGS ---
+Enable DDNS: True
+Allow Updates: Dynamic
+Authentication: (Optional) Username/Key for secure updates
