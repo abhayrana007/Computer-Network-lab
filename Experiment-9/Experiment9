@@ -1,0 +1,33 @@
+🚦 Transport Layer Protocol Simulation: UDP, TCP & SCTP
+🎯 Objective
+To design and simulate the behavior of User Datagram Protocol (UDP) , Transmission Control Protocol (TCP) , and Stream Control Transmission Protocol (SCTP) using Cisco Packet Tracer. The focus is on comparing connection establishment, reliability, and congestion control.
+
+📊 Protocol Characteristics
+Feature	UDP	TCP	SCTP
+Connection	Connectionless	Connection-oriented	Association-oriented
+Reliability	Unreliable (Best-effort)	Reliable (ACKs)	Reliable
+Handshake	None	3-Way Handshake	4-Way Handshake
+Data Flow	Byte-stream	Byte-stream	Message-oriented / Multi-streaming
+Congestion Control	None	Yes	Yes
+🖧 Network Topology
+Devices: 3 Pairs of PC-to-PC / Server connections
+
+Infrastructure:
+
+1 Central Switch
+
+1 Router (for inter-network traffic simulation)
+
+Addressing: 192.168.1.0/24 subnet
+
+🔍 Simulation Steps
+1. 📤 UDP (User Datagram Protocol)
+Observe the "fire and forget" nature.
+➡️ No SYN / ACK packets are generated.
+
+2. 🔗 TCP (Transmission Control Protocol)
+Use Simulation Mode to capture the handshake sequence:
+➡️ SYN → SYN-ACK → ACK
+
+3. 📨 SCTP (Stream Control Transmission Protocol)
+Analyze multi-streaming capabilities where multiple data streams are sent within a single association to prevent head-of-line blocking.
